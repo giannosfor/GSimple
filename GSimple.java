@@ -32,8 +32,6 @@ public class GSimple extends Window  {
     public void initUI() {
         HBox hbox = new HBox(true, 2);
 
-        //vbox.packStart(new Label("Try"));
-
         Button ok = new Button("OK");
         ok.connect(new Button.Clicked() {
             public void onClicked(Button source) {
@@ -45,12 +43,14 @@ public class GSimple extends Window  {
                 md.hide();
             }
         });
+
         Button close = new Button("Close");
         close.connect(new Button.Clicked() {
             public void onClicked(Button source) {
 		Gtk.mainQuit();
             }
         });
+
         hbox.add(ok);
         hbox.add(close);
 
